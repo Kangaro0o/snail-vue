@@ -3,12 +3,19 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import HelloWorld from '@/components/HelloWorld'
+import LayoutIndex from '@/pages/layout/layout-index'
+import Index from '@/pages/index'
 
 const routes = [
   {
-    path: '/hello',
-    component: HelloWorld
+    path: '/',
+    component: LayoutIndex,
+    children: [
+      {
+        path: 'index',
+        component: Index
+      }
+    ]
   }
 ]
 
